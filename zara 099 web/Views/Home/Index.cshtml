@@ -1,0 +1,28 @@
+﻿@model IEnumerable<zara_099_web.Models.MImages>;
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="himg">
+    <img src="/Images/architect.jpg" alt="home-Image" class="himg">
+    
+</div>
+
+
+ <h2 class="p_head">Projects</h2>
+<div class="p_sec">
+    @foreach (var item in Model)
+    {
+    <div class="card">
+        <div class="card_title">
+            <label>@item.label</label>
+        </div>
+        <div class="card_image">
+            <img src="@Url.Content(item.ImageUrl)" alt="project image" class="img">
+        </div>
+    </div>
+    }
+</div>
+
+

@@ -1,0 +1,32 @@
+﻿form method="post" action="/home/FormTestPost">
+<label for="Name">First Name</label>
+<input type="text" id="Name" name="userName" />
+<label for="Name">Last Name</label>
+<input type="text" id="Name" name="lastname" />
+<label for="Name">Ph Number</label>
+<input type="text" id="Phone number" name="number" />
+<label for="Name">email</label>
+<input type="text" id="email" name="email" />
+<label>Gender:</label>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="gender" id="Male" value="Male" checked>
+    <label class="form-check-label" for="Male"> Male</label><br />
+    <input class="form-check-input" type="radio" name="gender" id="Female" value="Female">
+    <label class="form-check-label" for="Female">Female</label>
+</div>
+<label for="">Select department:</label>
+<select class="form-control" name="department" required autofocus style="height:45px; width:300px">
+    <option>IT</option>
+    <option>Sale</option>
+</select>
+<button type="submit" onclick="notification()">Submit</button>
+<FformTest>
+<h1>@ViewBag.username</h1>
+<h1>@ViewBag.lastname</h1>
+<h1>@ViewBag.email</h1>
+<h1>@ViewBag.gender</h1>
+<h1>@ViewBag.number</h1>
+<h1>@ViewBag.department</h1>
+<script>function notification() {
+     alert("")
+    }</script>

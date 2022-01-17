@@ -1,0 +1,39 @@
+﻿@model zara_099_web.Models.Contact_us
+
+@{
+    ViewData["Title"] = "Contctus";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" action="/home/ContactPost">
+<label for="Name">First Name</label>
+<input type="text" id="Name" name="userName" /><br/>
+<label for="Name">Last Name</label>
+<input type="text" id="Name" name="lastname" /><br />
+<label for="Name">Ph Number</label>
+<input type="text" id="Phone number" name="number" /><br />
+<label for="Name">email</label>
+<input type="text" id="email" name="email" /><br />
+
+<label>Gender:</label>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="gender" id="Male" value="Male" checked>
+    <label class="form-check-label" for="Male"> Male</label><br />
+    <input class="form-check-input" type="radio" name="gender" id="Female" value="Female">
+    <label class="form-check-label" for="Female">Female</label>
+</div>
+<label for="">Select country:</label>
+<select class="form-control" name="country" required autofocus style="height:45px; width:300px">
+    <option>Pakistan</option>
+    <option>India</option>
+    <option>USA</option>
+</select>
+ 
+    <br>
+    <div class="form-check">
+        <label for="Message" class="control-lable">Message</label>
+        <textarea name="Message"></textarea>
+    </div>
+<button type="submit" onclick="notification()">Submit</button>
+</form>
+   
